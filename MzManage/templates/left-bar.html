@@ -1,0 +1,131 @@
+{% load static %}
+{% load extend_tags %}
+<!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="{% static "DevBaseStatic/dist/img/user2-160x160.jpg" %}" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+					<p>{{ request.session.auth_user|get_key:"username" }}</p>
+					
+          <!-- Status -->
+					<a><i class="fa fa-circle text-success"></i>角色： {{ request.session.auth_user|get_key:"role" }}</a>
+        </div>
+      </div>
+
+			<div>
+				|
+			</div>
+
+      <!-- search form (Optional)
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+              </button>
+            </span>
+        </div>
+      </form>
+      .search form -->
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <!-- Optionally, you can add icons to the links -->
+	<li class="active">
+            <a href="#">
+                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                <span class="pull-right-container">
+                </span>
+            </a>
+        </li>
+	<li>
+            <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>资产管理</span>
+                <span class="pull-right-container"></span>
+            </a>
+        </li>
+<!--
+				<li>
+            <a href="#">
+                <i class="fa  fa-cloud"></i> <span>云管平台</span>
+                <span class="pull-right-container">
+                <small class="label pull-right bg-green"></small>
+                </span>
+            </a>
+        </li>
+-->
+				<li class="treeview">
+          <a href="#"><i class="fa fa-group"></i> <span>堡垒机</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li>
+                <a href="#">
+                    <i class="fa fa-ellipsis-h"></i> <span>登录管理</span>
+                    <span class="pull-right-container">
+                    <small class="label pull-right bg-green"></small>
+                    </span>
+                </a>
+            </li>
+						<li>
+						<a href="{% url 'auths_index' %}">
+                    <i class="fa fa-user-circle-o"></i> <span>授权管理</span>
+                    <span class="pull-right-container">
+                    <small class="label pull-right bg-green"></small>
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa fa-indent"></i> <span>操作审计</span>
+                    <span class="pull-right-container">
+                    <small class="label pull-right bg-green"></small>
+                    </span>
+                </a>
+            </li>
+					</ul>
+				</li>
+<!--
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>资源管理</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+						<li>
+                <a href="#">
+                    <i class="fa fa-ellipsis-h"></i> <span>IP管理</span>
+                    <span class="pull-right-container">
+                    <small class="label pull-right bg-green"></small>
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa fa-indent"></i> <span>日志管理</span>
+                    <span class="pull-right-container">
+                    <small class="label pull-right bg-green"></small>
+                    </span>
+                </a>
+            </li>
+-->
+	  </ul>
+        </li>
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
