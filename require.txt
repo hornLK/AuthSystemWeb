@@ -15,7 +15,7 @@ idna==2.6
 Jinja2==2.10
 kombu==4.1.0
 MarkupSafe==1.0
-paramiko==2.4.1
+paramiko==2.10.1
 pika==0.11.2
 pyasn1==0.4.2
 pycparser==2.18
